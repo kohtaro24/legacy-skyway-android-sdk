@@ -7,8 +7,8 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -34,8 +34,8 @@ public class MainActivity extends Activity {
 	//
 	// Set your APIkey and Domain
 	//
-	private static final String API_KEY = "yourAPIKEY";
-	private static final String DOMAIN = "yourDomain";
+	private static final String API_KEY = BuildConfig.SKYWAY_API_KEY;
+	private static final String DOMAIN = BuildConfig.SKYWAY_DOMAIN;
 
 	private Peer			_peer;
 	private MediaStream		_localStream;
