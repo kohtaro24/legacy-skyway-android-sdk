@@ -194,12 +194,14 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 
+		// 音量制御ストリームタイプを通話音声に設定
 		// Set volume control stream type to WebRTC audio.
 		setVolumeControlStream(AudioManager.STREAM_VOICE_CALL);
 	}
 
 	@Override
 	protected void onPause() {
+		// 音量制御ストリームタイプをデフォルトに戻す
 		// Set default volume control stream type.
 		setVolumeControlStream(AudioManager.USE_DEFAULT_STREAM_TYPE);
 		super.onPause();
@@ -291,7 +293,7 @@ public class MainActivity extends Activity {
 
 		RoomOption option = new RoomOption();
 		option.mode = RoomOption.RoomModeEnum.SFU;
-		option.stream = _localStream;
+//		option.stream = _localStream;
 
 		// Join Room
 		_room = _peer.joinRoom(roomName, option);
